@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Trotz' Greenhouse Data</h1>
+
+<h4>Most recent reading: <%= self.controller.readable_time %></h4>
+
+<table>
+  <tr>
+    <th>Sensor</th>
+    <th>Temperature</th>
+    <th>Humidity</th>
+  </tr>
+  <% @current_data.greenhouse_sensor_data.each do |sensor_reading| %>
+    <tr>
+      <td><%= sensor_reading.which_sensor_as_string %>:</td>
+      <td><%= sensor_reading.temperature_as_fahrenheit_string %>°F</td>
+      <td><%= sensor_reading.humidity.round(2).to_s %>%</td>
+    </tr>
+  <% end %>
+</table>
+
+<br>

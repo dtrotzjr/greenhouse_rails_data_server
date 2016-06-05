@@ -1,0 +1,2 @@
+module GreenhouseHelper
+end
