@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font: "Helvetica Neue", "Arial", sans-serif
+    font-weight: bold;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid darkslategrey;
+}
