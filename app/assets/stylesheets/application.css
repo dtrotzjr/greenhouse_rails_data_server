@@ -13,16 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
 table {
     border-collapse: collapse;
 }
 
 th {
-    font: "Helvetica Neue", "Arial", sans-serif
     font-weight: bold;
     text-align: left;
+    padding: 6px 10px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+td {
+    padding: 6px;
+    background-color: whitesmoke;
 }
 
 table, th, td {
     border: 1px solid darkslategrey;
+}
+
+.gh_timestamp {
+    font-weight: 200;
+    font-size: .7em;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+
+.fio_weather {
+    background-color: #eaecec;
+    color: #456666;
+    padding: 12px;
+    float: right;
+    width: 200px;
+}
+
+.fio_temp {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.fio_summary {
+    font-size: 1em;
+    font-weight: 200;
 }
