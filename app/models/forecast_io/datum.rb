@@ -17,5 +17,9 @@ module ForecastIo
       return self.readable_time_date self.time
     end
 
+    def bearing_icon
+      return bearing_to_icon_name(self.wind_bearing)
+    end
+
   end
 end

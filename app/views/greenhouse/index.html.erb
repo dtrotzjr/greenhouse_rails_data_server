@@ -43,7 +43,7 @@
       <div class="fio_temp"><i class="wi wi-forecast-io-<%=current_forecast.forecast_io_icon.icon %> "></i> <%= current_forecast.temperature.round(0) %>°</div>
       <div class="fio_summary"><%= current_forecast.forecast_io_summary.summary %> · Feels like <%= current_forecast.apparent_temperature.round(0) %>°</div>
       <table class="weather_conditions" style align="center">
-        <tr><td class="tbl_weather_label">Wind:</td><td class="tbl_weather_value"><%= (current_forecast.wind_speed).round(0) %> mph&nbsp;&nbsp;<i class="wi wi-direction-up"></i></td></tr>
+        <tr><td class="tbl_weather_label">Wind:</td><td class="tbl_weather_value"><%= (current_forecast.wind_speed).round(0) %> mph&nbsp;&nbsp;<i class="wi <%= current_forecast.bearing_icon %>"></i></td></tr>
         <tr><td class="tbl_weather_label">Humidity:</td><td class="tbl_weather_value"><%= (current_forecast.humidity*100).round(0) %>%</td></tr>
         <tr><td class="tbl_weather_label">Dew point:</td><td class="tbl_weather_value"><%= (current_forecast.dew_point).round(0) %></td></tr>
         <tr><td class="tbl_weather_label">Visibility:</td><td class="tbl_weather_value"><%= (current_forecast.visibility).round(0) %> mi</td></tr>

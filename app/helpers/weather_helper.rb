@@ -10,7 +10,22 @@ module WeatherHelper
   end
 
   def bearing_to_icon_name(bearing)
-    # if bearing >=
-
+    if bearing > 337.5 && bearing <= 22.5
+      return 'wi-direction-up'
+    elsif bearing > 22.5 && bearing <= 67.5
+      return 'wi-direction-up-right'
+    elsif bearing > 67.5 && bearing <= 112.5
+      return 'wi-direction-right'
+    elsif bearing > 112.5 && bearing <= 157.5
+      return 'wi-direction-down-right'
+    elsif bearing > 157.5 && bearing <= 202.5
+      return 'wi-direction-down'
+    elsif bearing > 202.5 && bearing <= 247.5
+      return 'wi-direction-down-left'
+    elsif bearing > 247.5 && bearing <= 292.5
+      return 'wi-direction-left'
+    else
+      return 'wi-direction-up-left'
+    end
   end
 end
