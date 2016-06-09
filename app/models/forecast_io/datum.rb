@@ -3,6 +3,8 @@ module ForecastIo
     include WeatherHelper
     belongs_to :forecast_io_forecast, :class_name => 'ForecastIo::Forecast'
     belongs_to :forecast_io_summary, :class_name => 'ForecastIo::Summary', foreign_key: 'summary_id'
+    belongs_to :forecast_io_icon, :class_name => 'ForecastIo::Icon', foreign_key: 'icon_id'
+
     self.table_name = 'fio_data'
 
     def self.currentForecast()

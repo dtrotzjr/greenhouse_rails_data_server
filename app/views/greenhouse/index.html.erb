@@ -7,7 +7,7 @@
   <h4>Forecast.io Weather</h4>
   <div class="fio_weather">
     <% current_forecast = ForecastIo::Datum.currentForecast() %>
-    <div class="fio_temp"><i class="wi wi-day-sunny"></i> <%= current_forecast.temperature.round(0) %>°F</div>
+    <div class="fio_temp"><i class="wi wi-forecast-io-<%=current_forecast.forecast_io_icon.icon %> "></i> <%= current_forecast.temperature.round(0) %>°F</div>
     <div class="fio_summary"><%= current_forecast.forecast_io_summary.summary %></div>
     <div>Humidity: <%= (current_forecast.humidity*100).round(2) %>%</div>
     <div>Conditions as of: <%= current_forecast.readable_time_stamp %></div>
