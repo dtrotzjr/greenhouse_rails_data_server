@@ -8,4 +8,9 @@ module WeatherHelper
     Time::DATE_FORMATS[:gh_format] = '%a, %b %d, %Y - %I:%M:%S %p'
     return dt.to_formatted_s(:gh_format)
   end
+
+  def bearing_to_icon_name(bearing)
+    # if bearing >=
+
+  end
 end
