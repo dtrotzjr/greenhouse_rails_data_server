@@ -50,6 +50,22 @@
         <tr><td class="tbl_weather_label">Pressure:</td><td class="tbl_weather_value"><%= (current_forecast.pressure).round(0) %> mb</td></tr>
       </table>
     </p>
+    <h4>Greenhouse Sensors</h4>
+    <table class="weather_conditions" style align="center">
+      <tr>
+        <th>Sensor</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+      </tr>
+      <% @current_gh_data.greenhouse_sensor_data.each do |sensor_reading| %>
+          <tr>
+            <td><%= sensor_reading.which_sensor_as_string %></td>
+            <td><%= sensor_reading.temperature_as_fahrenheit_string %>°F</td>
+            <td><%= sensor_reading.humidity.round(2).to_s %>%</td>
+          </tr>
+      <% end %>
+    </table>
+    <div class="gh_timestamp"><%= @current_gh_data.readable_time_stamp %></div>
   </div>
 
   <div class="row marketing">
@@ -75,40 +91,3 @@
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
-
-
-
-<div class="container">
-  <h1>Local Weather</h1>
-
-  <h4>Forecast.io Weather</h4>
-  <div class="fio_weather">
-    <% current_forecast = ForecastIo::Datum.currentForecast() %>
-    <div class="fio_temp"><i class="wi wi-forecast-io-<%=current_forecast.forecast_io_icon.icon %> "></i> <%= current_forecast.temperature.round(0) %>°F</div>
-    <div class="fio_summary"><%= current_forecast.forecast_io_summary.summary %></div>
-    <div>Humidity: <%= (current_forecast.humidity*100).round(2) %>%</div>
-    <div>Conditions as of: <%= current_forecast.readable_time_stamp %></div>
-  </div>
-
-
-
-  <h4>Greenhouse Sensor Data</h4>
-  <table>
-    <tr>
-      <th>Sensor</th>
-      <th>Temperature</th>
-      <th>Humidity</th>
-    </tr>
-    <% @current_gh_data.greenhouse_sensor_data.each do |sensor_reading| %>
-        <tr>
-          <td><%= sensor_reading.which_sensor_as_string %></td>
-          <td><%= sensor_reading.temperature_as_fahrenheit_string %>°F</td>
-          <td><%= sensor_reading.humidity.round(2).to_s %>%</td>
-        </tr>
-    <% end %>
-  </table>
-  <div class="gh_timestamp"><%= @current_gh_data.readable_time_stamp %></div>
-
-  <br>
-
-</div>

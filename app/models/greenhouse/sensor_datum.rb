@@ -12,9 +12,9 @@ module Greenhouse
 
     def which_sensor_as_string
       if self.sensor_id == 1
-        return 'Greenhouse'
+        return 'Internal'
       else
-        return 'Outside'
+        return 'External'
       end
     end
   end
