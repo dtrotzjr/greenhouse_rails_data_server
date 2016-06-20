@@ -29,6 +29,8 @@ class GreenhouseController < ApplicationController
             avg = [hour, (current_hour_total_temps/current_hour_temp_count)]
             retval.push(avg)
             current_hour_timestamp = time
+            current_hour_total_temps = 0
+            current_hour_temp_count = 0
           end
         else
           current_hour_total_temps += temp
