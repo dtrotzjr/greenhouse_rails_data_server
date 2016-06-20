@@ -50,19 +50,18 @@
         <tr><td class="tbl_weather_label">Pressure:</td><td class="tbl_weather_value"><%= (current_forecast.pressure).round(0) %> mb</td></tr>
       </table>
     </p>
-    <div class="temp_chart" style align="center"><%= line_chart @_controller.hourly_average_temp_last_24_hours , width: "300px", height: "150px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
   </div>
 
   <div class="row marketing">
     <div class="col-lg-6">
       <h4>Temperature Data for the last 24 hours</h4>
-      <div class="temp_chart" style align="center"><%= line_chart @_controller.stacked_hourly_average_temps_last_24_hours , width: "450px", height: "200px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
+      <div class="temp_chart" style align="center"><%= line_chart @_controller.stacked_hourly_average_temps_last_24_hours , width: "400px", height: "250px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
     </div>
   </div>
   <div class="row marketing">
     <div class="col-lg-6">
       <h4>Humidity Data for the last 24 hours</h4>
-      <div class="temp_chart" style align="center"><%= line_chart @_controller.stacked_hourly_average_humids_last_24_hours , width: "450px", height: "200px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
+      <div class="temp_chart" style align="center"><%= line_chart @_controller.stacked_hourly_average_humids_last_24_hours , width: "400px", height: "250px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
     </div>
   </div>
   <footer class="footer">
