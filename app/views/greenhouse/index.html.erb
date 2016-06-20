@@ -50,6 +50,7 @@
         <tr><td class="tbl_weather_label">Pressure:</td><td class="tbl_weather_value"><%= (current_forecast.pressure).round(0) %> mb</td></tr>
       </table>
     </p>
+    <div class="temp_chart" style align="center"><%= line_chart @_controller.hourly_average_temp_last_24_hours , width: "300px", height: "150px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
   </div>
 
   <div class="row marketing">
