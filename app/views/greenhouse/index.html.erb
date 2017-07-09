@@ -80,6 +80,12 @@
       <div class="temp_chart" style align="center"><%= line_chart @_controller.stacked_hourly_average_humids_last_24_hours , width: "400px", height: "250px", min: nil, max: nil, xtitle: "Hour", ytitle: "Humidity %" %></div>
     </div>
   </div>
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h4>CPU Temperature to Internal Temperature for the last 24 hours</h4>
+      <div class="temp_chart" style align="center"><%= line_chart @_controller.stacked_hourly_soc_temp_last_24_hours , width: "400px", height: "250px", min: nil, max: nil, xtitle: "Hour", ytitle: "Temp °F" %></div>
+    </div>
+  </div>
   <footer class="footer">
     <p>&copy; 2016 David Trotz Jr.</p>
   </footer>
