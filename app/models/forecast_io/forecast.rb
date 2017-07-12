@@ -9,7 +9,7 @@ module ForecastIo
     self.table_name = 'fio_forecast'
 
     def readable_time_stamp()
-      return self.readable_time_date self.master_timestamp
+      return WeatherHelper.readable_time_date self.master_timestamp
     end
   end
 end

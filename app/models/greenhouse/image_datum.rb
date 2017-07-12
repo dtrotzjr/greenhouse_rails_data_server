@@ -16,7 +16,7 @@ module Greenhouse
 
     def self.most_recent_image_alt_text
       most_recent_data_point = Greenhouse::DataPoint.where(synchronized: 1).order('timestamp').last
-      alt_text = Date.strptime("#{most_recent_data_point.timestamp}", "%s").strftime('%A, %B %_m, %Y at %l:%M %P')
+      alt_text = WeatherHelper.readable_time_date most_recent_data_point.timestamp
       return alt_text
     end
   end

@@ -8,7 +8,7 @@ module Greenhouse
     self.table_name = 'gh_data_points'
 
     def readable_time_stamp()
-      return self.readable_time_date self.timestamp
+      return WeatherHelper.readable_time_date self.timestamp
     end
   end
 end

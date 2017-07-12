@@ -14,7 +14,7 @@ module ForecastIo
     end
 
     def readable_time_stamp()
-      return self.readable_time_date self.time
+      return WeatherHelper.readable_time_date self.time
     end
 
     def bearing_icon
