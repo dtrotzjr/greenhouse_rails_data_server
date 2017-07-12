@@ -41,7 +41,7 @@
   <div class="jumbotron centered">
     <h1>Current Conditions</h1>
     <div><b>Current Time: <%= current_forecast.readable_time_stamp %></b></div>
-    <div><img src="<%=current_img_name %>" alt="<%=current_img_alt_text %>" width="50%"></div>
+    <div><a href="<%=current_img_name %>"><img src="<%=current_img_name %>" alt="<%=current_img_alt_text %>" width="80%"></a></div>
     <div>Last Image Taken: <%=current_img_alt_text %></div>
     <p class="lead">
       <div class="fio_temp"><i class="wi wi-forecast-io-<%=current_forecast.forecast_io_icon.icon %> "></i> <%= current_forecast.temperature.round(0) %>°</div>
